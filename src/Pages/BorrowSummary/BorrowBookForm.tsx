@@ -18,7 +18,7 @@ export const BorrowBookForm = () => {
   const { data: bookData, isLoading: loadingBook } = useGetBookByIdQuery(id!);
   const [borrowBook, { isLoading }] = useBorrowBookMutation();
 
-  const { handleSubmit, control, watch } = useForm<BorrowFormInputs>({
+  const { handleSubmit, control } = useForm<BorrowFormInputs>({
     defaultValues: {
       quantity: 1,
       dueDate: "",
